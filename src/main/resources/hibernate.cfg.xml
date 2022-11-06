@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://LOCALHOST:3306/HDB</property>
+        <property name="hibernate.connection.username">tmuser</property>
+        <property name="hibernate.connection.password">tmuser</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- create  update  validate  create-drop -->
+        <property name="hbm2ddl.auto">create</property>
+        
+        <property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- 
+		<mapping class="com.blurdel.orm.jb.embedded.User" />
+		<mapping class="com.blurdel.orm.jb.embedded.UserColl" />
+		
+		<mapping class="com.blurdel.orm.jb.one2one.User121" />
+		<mapping class="com.blurdel.orm.jb.one2one.Vehicle121" />
+		
+		<mapping class="com.blurdel.orm.jb.one2many.User12many" />
+		<mapping class="com.blurdel.orm.jb.one2many.Vehicle12many" />
+		
+		<mapping class="com.blurdel.orm.jb.one2manymappedby.User12manyMaped" />
+		<mapping class="com.blurdel.orm.jb.one2manymappedby.Vehicle12manyMaped" />
+		
+		<mapping class="com.blurdel.orm.jb.many2many.Userm2m" />
+		<mapping class="com.blurdel.orm.jb.many2many.Vehiclem2m" />
+		 -->
+		
+		<mapping class="com.blurdel.orm.jb.one2one.User121" />
+		<mapping class="com.blurdel.orm.jb.one2one.Vehicle121" />
+		
+		 
+    </session-factory>
+</hibernate-configuration>
